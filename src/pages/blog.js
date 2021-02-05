@@ -1,10 +1,13 @@
 import React from "react"
+import Layout from "../components/Layout"
+import styles from "../components/blog.module.css"
 
 const blog = () => {
   return (
-    <div>
-      <h1>This is the blog page.</h1>
-    </div>
+    <Layout>
+      <h1 className={styles.title}>This is the blog page.</h1>
+      <p className={styles.text}>This is scoped red!</p>
+    </Layout>
   )
 }
 
