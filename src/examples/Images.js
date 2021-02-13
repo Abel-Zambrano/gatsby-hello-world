@@ -32,7 +32,7 @@ const Images = () => {
       <section className="images">
         <article className="single-image">
           <h3>Basic Image</h3>
-          <img src={img} alt="Basic Image" width="600px" height="400px" />
+          <img src={img} alt="Basic" width="600px" height="400px" />
         </article>
         <article className="single-image">
           <h3>Fixed Image/Blurr</h3>
