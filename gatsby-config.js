@@ -24,5 +24,12 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `3himf2jcfrft`,
+        accessToken: process.env.CON_TOKEN,
+      },
+    },
   ],
 }
