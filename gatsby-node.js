@@ -4,7 +4,7 @@ const path = require("path")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  graphql(`
+  const result = await graphql(`
     query GetProducts {
       products: allContentfulProduct {
         nodes {
@@ -13,10 +13,10 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  result.data.products.nodes.forEach(products => {
+  result.data.products.nodes.forEach(product => {
     createPage({
       path: `/products/${product.slug}`,
-      component: path.resolve(`src/template/product-template.js`),
+      component: path.resolve(`src/templates/product-template.js`),
       context: {
         slug: product.slug,
       },
